@@ -7,19 +7,13 @@ module.exports = {
     'react-native/react-native': true,
     'jest/globals': true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier', 'plugin:jest/recommended'],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
-    },
-    ecmaVersion: 12,
-    sourceType: 'module'
-  },
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'prettier', 'plugin:jest/recommended'],
+  parser: '@typescript-eslint/parser',
   plugins: ['react', 'react-native', 'jest','@typescript-eslint','unused-imports','simple-import-sort', 'react-hooks'],
   ignorePatterns: ['!.*', 'dist', 'node_modules/'],
   rules: {
     'no-console': 'error',
-    'no-unused-vars': 'off',
+    'no-unused-vars': 'error',
     '@typescript-eslint/no-unused-vars': ['error'],
     'no-tabs': ['error', { allowIndentationTabs: true }],
     'max-len': ['error', 160],

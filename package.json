@@ -12,6 +12,11 @@
     "format": "prettier . --write",
     "lint-staged": "lint-staged"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint . --ext .ts,.tsx && git add ."
+    }
+  },
   "dependencies": {
     "expo": "~51.0.8",
     "expo-status-bar": "~1.12.1",

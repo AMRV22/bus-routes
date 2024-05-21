@@ -13,11 +13,13 @@
     "lint-staged": "lint-staged"
   },
   "dependencies": {
+    "@eva-design/eva": "^2.2.0",
+    "@ui-kitten/components": "^5.3.1",
     "expo": "~51.0.8",
     "expo-status-bar": "~1.12.1",
-    "nativewind": "^2.0.11",
     "react": "18.2.0",
-    "react-native": "0.74.1"
+    "react-native": "0.74.1",
+    "react-native-svg": "^15.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

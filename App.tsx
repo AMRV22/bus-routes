@@ -1,15 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-// console.log("hola");
-
-// const a = 1;
+import { ApplicationProvider, Layout, Text, Button } from '@ui-kitten/components';
+import * as eva from '@eva-design/eva';
+import { default as theme } from './theme.json';
 
 export default function App() {
   return (
-    <View className='flex-1 items-center justify-center bg-primary'>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ApplicationProvider {...eva} theme={{...eva.light, ...theme}}>
+      <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text>Welcome to UI Kitten</Text>
+        <Button>HOME</Button>
+      </Layout>
+    </ApplicationProvider>
   );
 }
 
